@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmedrandas2tarea.Views.vLogin"
+             Title="vLogin">
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            Spacing="15"
+            Padding="25">
+            <Image 
+                Source="ulogo.png"
+            WidthRequest="100"/>
+            <Label 
+            Text="Bienvenido Tarea S2 "
+                FontSize="24"
+                TextColor="Blue"
+                HorizontalOptions="Center" />
+            <Entry
+                x:Name="txtusuario"
+                Placeholder="Ingrese el usuario"/>
+            <Entry
+                x:Name="txtpassword"
+                Placeholder="Ingree la contraseña"/>
+            <Button x:Name="btnIniciar"
+                Text="Iniciar Sesión "
+                Clicked="btnIniciar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

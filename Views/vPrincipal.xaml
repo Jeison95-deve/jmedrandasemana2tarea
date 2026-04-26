@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jmedrandas2tarea.Views.vPrincipal"
+             Title="vPrincipal">
+    <ScrollView>    
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="15">
+        <Label 
+            Text="Sistemas de Calificaciones"
+            FontSize="28"
+            FontFamily="Times New Roman"
+            HorizontalTextAlignment="Center" />
+        <Label
+            Text="Universidad Israel"
+            FontSize="24"
+            FontFamily="Times New Roman"
+            HorizontalTextAlignment="Center" />
+   
+       <Border Stroke="Black">
+                <Picker x:Name="pEstudiante"
+                    Title="Estudiante"
+                    BackgroundColor="#F3F4F6"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    FontFamily="Times New Roman">
+                    <Picker.Items
+                         FontFamily="Times New Roman">
+
+                        <x:String>Jeison Medranda</x:String>
+                    <x:String>Marco Perez</x:String>
+                    <x:String>Carlos Rodriguez</x:String>
+                    <x:String>Maria Gomez</x:String>
+                    <x:String>Ana Lopez</x:String>
+
+                </Picker.Items>
+            </Picker>
+       </Border>
+            <Label 
+            Text="Primer Parcial"
+            FontSize="18"
+            FontFamily="Times New Roman"
+            TextColor="#1E3A8A"
+           FontAttributes="Bold"
+          HorizontalTextAlignment="Center"/>
+            <Entry 
+                x:Name="txtSeguimiento1"  
+                Placeholder="ingrese nota segumiento"
+                Keyboard="Numeric"
+                TextChanged="OnValidarNota"/>
+            <Entry
+                x:Name="txtExamen1"
+                Placeholder="ingrese nota del examen"
+                Keyboard="Numeric"
+                TextChanged="OnValidarNota"/>
+            <Label Text="Nota Parcial 1:"
+               FontAttributes="Bold"/>
+            <Entry
+                x:Name="txtParcial1"
+               IsReadOnly="True"
+               BackgroundColor="#F3F4F6"/>
+        <Label Text="Segundo Parcial "
+               FontSize="18" 
+               FontAttributes="Bold"
+               TextColor="#1E3A8A"
+               HorizontalTextAlignment="Center"/>
+
+            <Entry
+                 x:Name="txtSeguimiento2"
+                 Placeholder="Ingrese nota "
+                 Keyboard="Numeric"
+                 TextChanged="OnValidarNota"/>
+            <Entry 
+                x:Name="txtExamen2"
+                Placeholder="Ingrese nota del examen"
+                Keyboard="Numeric"
+                TextChanged="OnValidarNota"/>
+            <Label Text="Nota Parcial 2:"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="txtParcial2"
+                   IsReadOnly="True"
+                   BackgroundColor="#F3F4F6"/>
+            <BoxView HeightRequest="1" Color="#E5E7EB"/>
+        <Label Text="Resultado Final"
+               FontSize="18" 
+               FontAttributes="Bold"
+               TextColor="#1E3A8A"
+               HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="txtNotaFinal"
+                   IsReadOnly="True"
+                   BackgroundColor="#F3F4F6"
+                   FontSize="18"
+                   TextColor="#DC2626"/>
+            <Label Text="Fecha de Registro:" />
+            <DatePicker x:Name="dpFecha" 
+                        MinimumDate="2025-01-01"
+                        MaximumDate="2026-12-31"/>
+            <Label Text="Estado"
+                   FontSize="18" 
+                   FontAttributes="Bold"
+                   TextColor="#1E3A8A"
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="txtEstado"
+                   IsReadOnly="True"
+                   BackgroundColor="#F3F4F6"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+            <Button x:Name="btnCalcular" 
+                    Text="CALCULAR NOTAS"
+                    Clicked="btnCalcular_Clicked"
+                    BackgroundColor="#3B82F6"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    Margin="0,10,0,5"/>
+            <Button x:Name="btnImprimir" 
+                    Text="IMPRIMIR REPORTE"
+                   Clicked="btnImprimir_Clicked"
+                    BackgroundColor="#10B981"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"/>
+
+            <Button x:Name="btnLimpiar" 
+                    Text="LIMPIAR CAMPOS"
+                    Clicked="btnLimpiar_Clicked"
+                    BackgroundColor="#6B7280"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"/>
+
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
