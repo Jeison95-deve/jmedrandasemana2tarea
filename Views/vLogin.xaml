@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="jmedrandas2tarea.Views.vLogin"
              Title="vLogin">
+    <ContentPage.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="TextColor" Value="#1E3A8A"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout
             VerticalOptions="Center"
@@ -15,17 +23,52 @@
             Text="Bienvenido Tarea S2 "
                 FontSize="24"
                 TextColor="Blue"
+                Style="{StaticResource LabelStyle}"
                 HorizontalOptions="Center" />
-            <Entry
-                x:Name="txtusuario"
-                Placeholder="Ingrese el usuario"/>
-            <Entry
-                x:Name="txtpassword"
-                Placeholder="Ingree la contraseña"/>
+
+        <Grid
+            RowSpacing="10"
+            ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="USUARIO"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                       Style="{StaticResource LabelStyle}"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+                <Entry
+                x:Name="txtUsuario"
+                Placeholder="Ingrese el usuario"
+                Grid.Row="0"
+                Grid.Column="1"/>
+                <Label Text="CONTRASEÑA"
+                       HorizontalOptions="Start"
+                       Style="{StaticResource LabelStyle}"
+                        VerticalOptions="Center"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Entry
+                x:Name="txtPassword"
+                Placeholder="Ingrese la contraseña"
+                Grid.Row="1"
+                Grid.Column="1"
+                IsPassword="True"/>
             <Button x:Name="btnIniciar"
                 Text="Iniciar Sesión "
+                 HorizontalOptions="Center"
+                    FontFamily="times new roman"
+                 Grid.Row="2"
+                 Grid.Column="1"
                 Clicked="btnIniciar_Clicked"/>
-
+         </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

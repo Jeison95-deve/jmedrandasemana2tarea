@@ -132,9 +132,13 @@
                     TextColor="White"
                     FontAttributes="Bold"
                     CornerRadius="10"/>
-
-
-
+            <Button x:Name="btnSalir" 
+                    Text="SALIR"
+                    Clicked="btnSalir_Clicked"
+                    BackgroundColor="#EF4444"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"/>
 
 
 

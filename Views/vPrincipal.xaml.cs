@@ -258,4 +258,10 @@ public partial class vPrincipal : ContentPage
         DisplayAlert("Éxito", "Todos los campos han sido limpiados", "OK");
     }
 
+    private void btnSalir_Clicked(object sender, EventArgs e)
+    {
+    
+        Navigation.PushAsync(new Views.vLogin());
+
+    }
 }
